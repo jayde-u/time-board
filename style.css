@@ -1,0 +1,36 @@
+html, body {
+    height: 100%;
+    background-color: rgb(24, 24, 24);
+    margin: 0;
+}
+
+#main-container {
+    display: grid;
+    grid-template-rows: 1fr 4fr 1fr;
+    align-items: center;
+    justify-items: center;
+
+    width: 100vw;
+    height: 95vh;
+}
+
+#toggle-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 90%;
+}
+
+#widget-container {
+    display: grid;
+    grid-template-columns: 3fr 3fr 1fr;
+    align-items: center;
+    justify-items: center;
+
+    width: 60%;
+}
+
+.time-element {
+    display: none;
+}
