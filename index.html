@@ -9,9 +9,14 @@
 <body>
 	<div id="main-container">
 		<div id="toggle-container">
-			<div class="time-toggle" id="display"></div>
-			<div class="time-toggle" id="function"></div>
-			<div class="time-toggle" id="theme"></div>
+			<div class="time-toggle display"></div>
+			<div class="time-toggle function"></div>
+			<div class="time-toggle theme">
+				<input type="checkbox" name="theme" id="theme"/>
+				<label for="theme">
+					<span class="ball"></span>
+				</label>
+			</div>
 		</div>
 		<div id="widget-container">
 			<div class="time-widget active" data-display="flip" data-function="clock" data-theme="dark"></div>
@@ -24,7 +29,6 @@
 		</div>
 		<div></div>
 	</div>
-	
 	<footer>Time Board</footer>
 	<script type="text/javascript" src="./script.js"></script>
 </body>

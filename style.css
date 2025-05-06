@@ -1,12 +1,16 @@
+:root {
+    --backgroud-dark: rgb(31, 30, 32);
+}
+
 html, body {
     height: 100%;
-    background-color: rgb(24, 24, 24);
+    background-color: var(--backgroud-dark);
     margin: 0;
 }
 
 #main-container {
     display: grid;
-    grid-template-rows: 1fr 4fr 1fr;
+    grid-template-rows: 4em 4fr 1fr;
     align-items: center;
     justify-items: center;
 
@@ -16,10 +20,52 @@ html, body {
 
 #toggle-container {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
 
     width: 90%;
+    height: 50%;
+}
+
+.time-toggle {
+    position: relative;
+    height: 100%;
+}
+
+input {
+    display: none;
+}
+
+.time-toggle.theme {
+    background-color: black;
+    border-radius: 20px;
+    width: 3.6em;
+}
+
+label[for="theme"] {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.ball {
+    position: absolute;
+    left: 3%;
+
+    height: 85%;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    background-color: white;
+
+    transition: transform 0.3s ease;
+}
+
+input#theme:checked +label .ball {
+    transform: translateX(100%);
 }
 
 #widget-container {
